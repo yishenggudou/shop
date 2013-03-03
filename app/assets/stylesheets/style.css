@@ -1,0 +1,100 @@
+body{
+	background-color: #EEE;
+	font-color:block;
+}
+
+ul li{
+	list-style: none;
+	display: inline;
+}
+
+li{
+	display: inline;
+	float: left;
+}
+
+
+footer{
+	border-top: 1px solid black;
+}
+
+
+
+footer ul li{
+	margin-right: 20px;
+	margin-top: 10px;
+	padding-bottom: 30px;
+}
+
+
+.container-fluid{
+	padding-left: 13%;
+	padding-right: 13%;
+}
+
+.left{
+	background-color: #fff;
+	padding-right: 10px;
+
+}
+
+.right{
+	background-color: #fff;
+	margin-right: -10px;
+}
+
+#profile_section{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px dashed black;
+}
+
+#profile_content{
+
+
+
+}
+
+#profile_content h4{
+	padding-top: 10px;
+	padding-left: 20px;
+	
+}
+
+
+#profile_content p{
+	margin-top: 20px;
+	padding-left:20px;
+	padding-right: 20px;
+	line-height: 30px;
+	padding-bottom: 25px;
+	border-bottom: 1px dashed black;
+
+}
+
+a.pic img{
+	width: 120px;
+	margin-right: 33px;
+	margin-top: 10px;
+}
+
+.male p{
+	font-size: 20px;
+	margin-left: 26px;
+	margin-top: 10px;
+}
+
+.shucai{
+	clear: both;
+}
+
+.shucai p{
+	font-size: 20px;
+	margin-left: 26px;
+	margin-top: 10px;
+}
+
+.t{
+	padding: 10px;
+}
