@@ -1,7 +1,8 @@
 <% provide(:title,'注册') %>
-<h1>注册</h1>
-<dvi class = 'row' >
+
+<div class = 'row' >
 	<div class='span6 offset3' >
+		<h1>注册</h1>
 		<%= render 'shared/error_messages' %>
 		<%= form_for(@user) do |f| %>
 
@@ -21,9 +22,10 @@
 		<%= f.password_field :password %>
 
 		<%= f.label :确认密码 %>
-		<%= f.password_field :password_confirmation %>
+		<%= f.password_field :password_confirmation %></br>
 
 		<%= f.submit '提交' , class: 'btn btn-large btn-primary' %>
 	<% end %>
  	</div>
  </div>
+</div>
