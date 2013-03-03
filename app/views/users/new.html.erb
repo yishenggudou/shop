@@ -1,3 +1,29 @@
-<% provide(:title,'登陆') %>
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% provide(:title,'注册') %>
+<h1>注册</h1>
+<dvi class = 'row' >
+	<div class='span6 offset3' >
+		<%= render 'shared/error_messages' %>
+		<%= form_for(@user) do |f| %>
+
+		<%= f.label :名字 %>
+		<%= f.text_field :name %>
+
+		<%= f.label :邮箱 %>
+		<%= f.text_field :email %>
+
+		<%= f.label :收获地址 %>
+		<%= f.text_field :location %>
+
+		<%= f.label :电话 %>
+		<%= f.text_field :phone %>
+
+		<%= f.label :密码 %>
+		<%= f.password_field :password %>
+
+		<%= f.label :确认密码 %>
+		<%= f.password_field :password_confirmation %>
+
+		<%= f.submit '提交' , class: 'btn btn-large btn-primary' %>
+	<% end %>
+ 	</div>
+ </div>
