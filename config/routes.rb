@@ -3,6 +3,7 @@ Shop::Application.routes.draw do
   resources :sessions , only: [:new,:create,:destroy]
 
   root to: 'static_pages#home'
+
  
   match '/signup', to: 'users#new'
   match 'signin', to: 'sessions#new'

@@ -9,12 +9,17 @@ class SessionsController < ApplicationController
 			sign_in user
 			redirect_to user
 		else
-			flash[:error] = '邮箱错误 或密码错误'
+			flash.now[:error] = '邮箱错误 或密码错误'
 			render 'new'
 		end
 	end
 
 	def destroy
+		sign_out
+		redirect_to root_path
 	end
+
+
+
 	
 end

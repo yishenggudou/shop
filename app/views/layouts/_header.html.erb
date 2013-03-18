@@ -3,7 +3,12 @@
           <li> <%= link_to '首页' ,root_path %></li>
           <li> <%= link_to '购物车' , '#' %> </li>
           <li> <%= link_to '留言' , '#' %></li> 
-          <li class='pull-right'> <%= link_to '注 册' , signup_path%></li>
-          <li class='pull-right'> <%= link_to '登 陆', signin_path %></li>
+          <% if signed_in? %>
+          		<li class='pull-right'> <%= link_to '设置' , user_path(current_user) %>
+         		<li class='pull-right'> <%= link_to '退出' , signout_path , method: 'delete' %>
+          <% else %>
+          		<li class='pull-right'> <%= link_to '注 册' , signup_path%></li>
+          		<li class='pull-right'> <%= link_to '登 陆', signin_path %></li>
+		  <% end %>   		
     </ul>
 </div>
