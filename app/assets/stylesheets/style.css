@@ -43,11 +43,21 @@ footer ul li{
 	margin-right: -10px;
 }
 
+.lf{
+	padding-top: 20px;
+}
+
 #profile_section{
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px dashed black;
+}
+
+#profile_section p{
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #profile_content{
@@ -74,9 +84,15 @@ footer ul li{
 }
 
 a.pic img{
-	width: 120px;
-	margin-right: 33px;
+	width: 130px;
+	height: 130px;
+	margin-left: 42px;
 	margin-top: 10px;
+}
+
+p.name {
+	margin-left: 42px;
+
 }
 
 .male p{
@@ -97,4 +113,6 @@ a.pic img{
 
 .t{
 	padding: 10px;
+	width: 754px;
+	border-bottom: 1px solid #f83;	
 }

@@ -2,80 +2,36 @@
   <div >
     <div class="row-fluid" >
       <div class="span8 left"> 
-      	<%= image_tag 'a.jpg' , :class =>'t' %>
+      	<%= image_tag '11.jpg' , :class =>'t' %>
         <div class="lf">
           <div class='male'>
            
             <p>荤菜</p>
+          
           </div>
           <ul>
-
+             <% @food.each do |f| %>
             <li>
-              <a class="pic"> <%= image_tag '2.jpg' %> </a>
-              <p class="name">  <a href="">白菜</a>  </p>
+              <% if f.flesh == true%>
+              <a class="pic"> <%= image_tag(f.image)  %> </a>
+              <p class="name">  <a href=""><%= f.name %></a>  </p>
             </li>
-            <li>
-              <a class="pic"> <%= image_tag '3.jpg' %> </a>
-              <p class="name">  <a href="">萝卜</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '1.jpg' %> </a>
-              <p class="name">  <a href="">豆腐</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '2.jpg' %> </a>
-              <p class="name">  <a href="">白菜</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '3.jpg' %> </a>
-              <p class="name">  <a href="">萝卜</a>  </p>
-            </li>       
-             <li>
-              <a class="pic"> <%= image_tag '1.jpg' %> </a>
-              <p class="name">  <a href="">豆腐</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '2.jpg' %> </a>
-              <p class="name">  <a href="">白菜</a>  </p>
-            </li>  
+            <% end %>
+            <% end %>
         </ul>
 
           <div class='shucai'>
             <p>素菜</p>
           </div>
           <ul>
- 			<li>
-              <a class="pic"> <%= image_tag '1.jpg' %> </a>
-              <p class="name">  <a href="">豆腐</a>  </p>
+            <% @food.each do |z| %>
+            <% if z.flesh == false %>
+ 			      <li>
+              <a class="pic"> <%= image_tag(z.image) %> </a>
+              <p class="name">  <a href=""><%= z.name %></a>  </p>
             </li>
-            <li>
-              <a class="pic"> <%= image_tag '2.jpg' %> </a>
-              <p class="name">  <a href="">白菜</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '3.jpg' %> </a>
-              <p class="name">  <a href="">萝卜</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '1.jpg' %> </a>
-              <p class="name">  <a href="">豆腐</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '2.jpg' %> </a>
-              <p class="name">  <a href="">白菜</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '3.jpg' %> </a>
-              <p class="name">  <a href="">萝卜</a>  </p>
-            </li>       
-             <li>
-              <a class="pic"> <%= image_tag '1.jpg' %> </a>
-              <p class="name">  <a href="">豆腐</a>  </p>
-            </li>
-            <li>
-              <a class="pic"> <%= image_tag '2.jpg' %> </a>
-              <p class="name">  <a href="">白菜</a>  </p>
-            </li>
+            <% end %>
+            <% end %>
           </ul>
 
         </div>
@@ -86,8 +42,10 @@
       <div class='span4 right'>
         <div class='side'>
           <div id='profile_section'>
-            <p><strong>Today What you want eat? </strong></p>
-            <p><strong>Let's Shop Now !</strong></p>  
+           <P>不太敢网上订餐？</p>
+
+          <p>别担心，你的订单会立刻得到处理，外卖进度还会实时反馈给你。很多人已经用上瘾了，你也试一次吧。</p>
+ 
           </div>
 <!-- jianjie -->
           <div id='profile_content'>
