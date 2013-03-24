@@ -1,0 +1,8 @@
+<ul>
+<%= @food.each do |f|  %>
+	<li>
+	<%= f.name %>
+	<img src='<%= f.image %>'>
+	</li>
+<% end%>
+</ul>
