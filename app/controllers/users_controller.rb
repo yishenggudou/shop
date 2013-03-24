@@ -33,4 +33,16 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+
+  private
+
+    def signed_in_user
+      redirect_to signin_path , notice: '请登陆' unless signed_in?
+    end
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_path) unless currect_user?(@user)
+    end
 end
