@@ -13,6 +13,7 @@
 #
 
 class User < ActiveRecord::Base
+  has_many :foods
   attr_accessible :email, :location, :name, :password, :password_confirmation , :phone
   has_secure_password
   

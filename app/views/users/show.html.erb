@@ -1,1 +1,8 @@
-<%= @user.name %> , <%= @user.email %>
+<div class='row-fluid'>
+	<div class='span6 offset3'>
+		<p>名字:<%= @user.name %></p>
+		<p>电话:<%= @user.phone %></p>
+		<p>送货地址:<%= @user.location %></p>
+		<%= link_to '修改资料？' , edit_user_path %>
+	</div>
+</div>

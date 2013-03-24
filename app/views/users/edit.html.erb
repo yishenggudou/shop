@@ -1,0 +1,29 @@
+<% provide(:title , '编辑资料') %>
+
+<div class='row' >
+	<div class='span6 offset3'>
+		<h1> 修改信息 </h1>
+
+	<%= form_for(@user) do |f| %>
+		<% render 'shared/error_messages' %>
+
+		<%= f.label :名字 %>
+		<%= f.text_field :name %>
+
+
+		<%= f.label :地址 %>
+		<%= f.text_field :location %>
+
+		<%= f.label :电话 %>
+		<%= f.text_field :phone %>
+
+		<%= f.label :密码 %>
+		<%= f.password_field :password %>
+
+		<%= f.label :密码确认 %>
+		<%= f.password_field :password_confirmation %></br>
+
+		<%= f.submit '修改设置', class: 'btn btn-large btn-primary' %>
+		<% end %>
+	</div>
+</div>

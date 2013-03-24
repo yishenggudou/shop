@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
   	@food = Food.all
+  	@current_user = session[:user]
   end
 
   def jobs
