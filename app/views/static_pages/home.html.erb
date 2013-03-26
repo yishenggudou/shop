@@ -63,8 +63,11 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $(".pic , .name").click(function(){
-    $(this).parent().hide();
-    $('#shop_box').add('li').text('text')
+    android.parent().hide();
+    $('#shop_box').add('li').text('text');
+    var text = '';
+    var li = "<li>" + text + "</li>";
+    $('#shop_box').append(li);
   });
 });
 </script>
