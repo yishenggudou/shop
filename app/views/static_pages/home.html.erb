@@ -13,8 +13,8 @@
              <% @food.each do |f| %>
             <li>
               <% if f.flesh == true%>
-              <a class="pic"> <%= image_tag(f.image)  %> </a>
-              <p class="name">  <a href=""><%= f.name %></a>  </p>
+              <a class="pic"> <%= image_tag f.image , id: f.id %> </a>
+              <p class="name"> <%= f.name %> </p>
             </li>
             <% end %>
             <% end %>
@@ -27,17 +27,14 @@
             <% @food.each do |z| %>
             <% if z.flesh == false %>
  			      <li>
-              <a class="pic"> <%= image_tag(z.image) %> </a>
-              <p class="name">  <a href=""><%= z.name %></a>  </p>
+              <a class="pic"> <%= image_tag z.image, id: z.id %> </a>
+              <p class="name"> <%= z.name %></p>
             </li>
             <% end %>
             <% end %>
           </ul>
 
         </div>
-    
-
-
       </div>
       <div class='span4 right'>
         <div class='side'>
@@ -49,15 +46,26 @@
           </div>
 <!-- jianjie -->
           <div id='profile_content'>
-            <h4> Shop OnLine </h4>
-            <p> It's very Amazing thing ! We provide a lot of thing you like .Just Enjoy the website.</p>
-            <div id = 'shop_box'>this is shop box</div>
+            <h4> 购物篮子 </h4>
+            <ul id="shop_box">  
+              <li>鱼肉</li>
+              <li>虾米</li>
+            </ul>
+           
           </div>
         </div>
 
       </div>
     </div>
 
+
   </div>
-  
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".pic , .name").click(function(){
+    $(this).parent().hide();
+    $('#shop_box').add('li').text('text')
+  });
+});
+</script>
 
